@@ -56,6 +56,7 @@ export default function SignUp() {
                pokemon["weight"]=r.weight
                pokemon["height"]=r.height
                pokemon["baseExp"]=r.base_experience
+               pokemon["number"]=r.id
                
                arr.push(pokemon)
                setPokemons(arr)
@@ -113,7 +114,7 @@ export default function SignUp() {
                 <ButtonS onClick={()=>f0()}> p0</ButtonS>
                 <ButtonS onClick={()=>f1()}> p1</ButtonS>
                 <ButtonS onClick={()=>f2()}> p2</ButtonS>
-                <ButtonS onClick={()=>sendToDB()}> p2</ButtonS>
+                <ButtonS onClick={()=>sendToDB()}> p3</ButtonS>
             </Container>
         </Page>
     );
