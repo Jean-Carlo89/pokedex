@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext} from "react";
 import {
     BrowserRouter as Router,
     Switch,
@@ -15,7 +15,22 @@ import PokemonList from "./pages/PokemonList";
 import Pokemon from "./pages/Pokemon";
 import MyPokemons from "./pages/MyPokemons";
 
+
 export default function App() {
+    
+    
+
+
+
+
+
+   
+ 
+
+    
+    
+    
+    
     return (
         <>
             <UserProvider>
