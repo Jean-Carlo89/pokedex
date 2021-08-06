@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext,useEffect } from 'react';
 import styled from "styled-components";
 
 import Header from "../components/Header";
@@ -9,6 +9,11 @@ import PokemonsContext from "../contexts/PokemonsContext";
 
 export default function PokemonListPage() {
     const { pokemons } = useContext(PokemonsContext);
+
+    // useEffect(()=>{
+      
+      
+    // },[])
 
     return (
         <>
