@@ -34,6 +34,43 @@ export default function SignUp() {
             })
     })
 
+   
+
+    function submit(event) {
+        event.preventDefault();
+
+        axios.post(`${process.env.REACT_APP_API_BASE_URL}/sign-up`, {
+            email,
+            password,
+            confirmPassword
+        }).then(res => {
+           // setToken(res.data.token);
+            history.push("/");
+        });
+        
+    }
+
+    return (
+        <Page>
+            <Container onSubmit={submit}>
+                <img src={logo} alt="Logo" />
+                <Input type="text" placeholder="E-mail" value={email} onChange={e => setEmail(e.target.value)} />
+                <Input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
+                <Input type="password" placeholder="Confirm your password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
+                <Button>Sign In</Button>
+                <Link to="/login" style={{ padding: '6px' }}>Already have an account? Log In</Link>
+                
+                <ButtonS onClick={()=>f0()}> p0</ButtonS>
+                <ButtonS onClick={()=>f1()}> p1</ButtonS>
+                <ButtonS onClick={()=>f2()}> p2</ButtonS>
+                <ButtonS onClick={()=>sendToDB()}> p3</ButtonS>
+            </Container>
+        </Page>
+    );
+
+
+
+
     function f0(){
         console.log(p0)
         console.log(p1)
@@ -87,37 +124,6 @@ export default function SignUp() {
         axios.post("http://localhost:4000/insert",pokemons)
         
     }
-
-    function submit(event) {
-        event.preventDefault();
-
-        axios.post(`${process.env.REACT_APP_API_BASE_URL}/sign-up`, {
-            email,
-            password,
-            confirmPassword
-        }).then(res => {
-            setToken(res.data.token);
-            history.push("/");
-        });
-    }
-
-    return (
-        <Page>
-            <Container onSubmit={submit}>
-                <img src={logo} alt="Logo" />
-                <Input type="text" placeholder="E-mail" value={email} onChange={e => setEmail(e.target.value)} />
-                <Input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
-                <Input type="password" placeholder="Confirm your password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
-                <Button>Sign In</Button>
-                <Link to="/login" style={{ padding: '6px' }}>Already have an account? Log In</Link>
-                
-                <ButtonS onClick={()=>f0()}> p0</ButtonS>
-                <ButtonS onClick={()=>f1()}> p1</ButtonS>
-                <ButtonS onClick={()=>f2()}> p2</ButtonS>
-                <ButtonS onClick={()=>sendToDB()}> p3</ButtonS>
-            </Container>
-        </Page>
-    );
 }
 
 const Page = styled.div`
