@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext} from "react";
 import { Link, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import axios from "axios";
@@ -17,7 +17,6 @@ export default function SignUp() {
 
     const { setToken } = useContext(UserContext);
     const history = useHistory();
-
 
 
     function submit(event) {
@@ -76,9 +75,3 @@ const Container = styled.form`
 `;
 
 
-const ButtonS = styled.button`
-width:200px;
-height: 100px;
-background-color: green;
-
-`
