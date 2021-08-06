@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext} from "react";
 import { Link, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import axios from "axios";
@@ -28,7 +28,8 @@ export default function SignUp() {
             password,
             confirmPassword
         }).then(res => {
-            setToken(res.data.token);
+            //setToken(res.data.token);
+           
             history.push("/");
         });
     }
@@ -70,9 +71,3 @@ const Container = styled.form`
 `;
 
 
-const ButtonS = styled.button`
-width:200px;
-height: 100px;
-background-color: green;
-
-`
