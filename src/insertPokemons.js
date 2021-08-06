@@ -101,7 +101,7 @@ console.log(' asaasasass')
     //     await getRepository(Pokemon).insert(pokemons[i])
     //    }
     console.log(pokemons)
-    axios.post(`${REACT_APP_API_BASE_URL}/insert`,pokemons)
+    axios.post(`${process.env.REACT_APP_API_BASE_URL}/insert`,pokemons)
 
 
     
