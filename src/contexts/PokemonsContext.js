@@ -10,9 +10,13 @@ export function PokemonsProvider({ children }) {
     const { token } = useContext(UserContext);
     const [pokemons, setPokemons] = useState(null);
 
-    useEffect(async () => {
+
+    useEffect(() => {
        
         updatePokemons();
+
+    
+
     }, [token?.token]);
 
     function updatePokemons() {

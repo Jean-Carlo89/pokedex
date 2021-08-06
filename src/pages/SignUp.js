@@ -22,7 +22,7 @@ export default function SignUp() {
     function submit(event) {
         event.preventDefault();
 
-        axios.post(`${process.env.REACT_APP_API_BASE_URL}/sign-up`, {
+         axios.post(`${process.env.REACT_APP_API_BASE_URL}/sign-up`, {
             email,
             password,
             confirmPassword
