@@ -16,7 +16,10 @@ import Pokemon from "./pages/Pokemon";
 import MyPokemons from "./pages/MyPokemons";
 
 
+
 export default function App() {
+    
+   
     
     return (
         <>

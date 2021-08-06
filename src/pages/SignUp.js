@@ -18,7 +18,6 @@ export default function SignUp() {
     const { setToken } = useContext(UserContext);
     const history = useHistory();
 
-    
 
     function submit(event) {
         event.preventDefault();
@@ -28,10 +27,10 @@ export default function SignUp() {
             password,
             confirmPassword
         }).then(res => {
-            //setToken(res.data.token);
-           
+           // setToken(res.data.token);
             history.push("/");
         });
+        
     }
 
     return (
@@ -43,10 +42,15 @@ export default function SignUp() {
                 <Input type="password" placeholder="Confirm your password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
                 <Button>Sign In</Button>
                 <Link to="/login" style={{ padding: '6px' }}>Already have an account? Log In</Link>
-               
+                
             </Container>
-        </Page>
+        </Page> 
     );
+
+
+
+
+   
 }
 
 const Page = styled.div`

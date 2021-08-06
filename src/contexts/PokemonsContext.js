@@ -1,6 +1,6 @@
 import { useEffect, useState, createContext, useContext } from "react";
 import axios from "axios";
-
+import getPokemons from '../insertPokemons'
 import UserContext from "../contexts/UserContext";
 
 const PokemonsContext = createContext();
@@ -10,8 +10,13 @@ export function PokemonsProvider({ children }) {
     const { token } = useContext(UserContext);
     const [pokemons, setPokemons] = useState(null);
 
+
     useEffect(() => {
-        
+       
+        updatePokemons();
+
+    
+
     }, [token?.token]);
 
     function updatePokemons() {
