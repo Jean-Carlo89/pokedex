@@ -11,7 +11,7 @@ export function PokemonsProvider({ children }) {
     const [pokemons, setPokemons] = useState(null);
 
     useEffect(async () => {
-       await getPokemons()
+       
         updatePokemons();
     }, [token?.token]);
 

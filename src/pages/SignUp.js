@@ -44,7 +44,7 @@ export default function SignUp() {
                 <Link to="/login" style={{ padding: '6px' }}>Already have an account? Log In</Link>
                 
             </Container>
-        </Page>
+        </Page> 
     );
 
 
