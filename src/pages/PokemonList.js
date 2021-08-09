@@ -18,7 +18,7 @@ export default function PokemonListPage() {
                 {pokemons === null && "Loading..."}
                 {pokemons && pokemons.length === 0 && "No Pokémon found!"}
                 {pokemons && pokemons.map(p => <PokemonButton pokemon={p} key={p.name} />)}
-                <button onClick={()=>console.log(token)}>aaa</button>
+                
             </Container>
 
             <Footer currentPage="list" />
