@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import styled from "styled-components";
-
+import UserContext from "../contexts/UserContext";
 import Header from "../components/Header";
 import PokemonButton from '../components/PokemonButton';
 import Footer from "../components/Footer";
@@ -9,7 +9,7 @@ import PokemonsContext from "../contexts/PokemonsContext";
 
 export default function PokemonListPage() {
     const { pokemons } = useContext(PokemonsContext);
-
+    const { token } = useContext(UserContext);
     return (
         <>
             <Header />
@@ -18,6 +18,7 @@ export default function PokemonListPage() {
                 {pokemons === null && "Loading..."}
                 {pokemons && pokemons.length === 0 && "No Pokémon found!"}
                 {pokemons && pokemons.map(p => <PokemonButton pokemon={p} key={p.name} />)}
+                <button onClick={()=>console.log(token)}>aaa</button>
             </Container>
 
             <Footer currentPage="list" />
