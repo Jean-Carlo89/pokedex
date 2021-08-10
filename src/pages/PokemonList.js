@@ -1,15 +1,17 @@
-import { useContext } from 'react';
+import { useContext,useEffect } from 'react';
 import styled from "styled-components";
 import UserContext from "../contexts/UserContext";
 import Header from "../components/Header";
 import PokemonButton from '../components/PokemonButton';
 import Footer from "../components/Footer";
-
+import updatePokemons from '../contexts/PokemonsContext'
 import PokemonsContext from "../contexts/PokemonsContext";
 
 export default function PokemonListPage() {
     const { pokemons } = useContext(PokemonsContext);
     const { token } = useContext(UserContext);
+    
+
     return (
         <>
             <Header />
